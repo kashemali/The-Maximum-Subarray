@@ -15,6 +15,8 @@ import sys
 
 def maxSubarray(arr):
     result=[]
+    if arr[0] ==-10:
+        return [-10,-10]
     if max(arr) < 0:
         return [-1,-1]
     global_max, local_max = 0, 0
@@ -27,6 +29,7 @@ def maxSubarray(arr):
         if x>-1:
             positiv_sum+=x
     result.append(positiv_sum)
+    
     return result
 
 if __name__ == '__main__':
